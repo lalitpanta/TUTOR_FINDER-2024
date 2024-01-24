@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload document</title>
+    <style>
+        .container{
+            width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding:50px 60px 70px;
+    text-align: center;
+
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #fileInput {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+        #fileName {
+            margin-top: 10px;
+        }
+        #submitButton {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>upload file</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="fileInput">Choose a file</label>
+        <input type="file" id="fileInput" name="file" onchange="displayFileName()" accept=".jpg, .jpeg, .png">
+
+        <div id="fileName"></div>
+
+        <button type="button" id="submitButton" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+    <script>
+        function displayFileName() {
+            var fileInput = document.getElementById('fileInput');
+            var fileNameDisplay = document.getElementById('fileName');
+
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = 'Selected file: ' + fileInput.files[0].name;
+            } else {
+                fileNameDisplay.textContent = 'No file selected';
+            }
+        }
+
+        function submitForm() {
+            var form = document.getElementById('uploadForm');
+            var formData = new FormData(form);
+
+            // You can use Fetch API or XMLHttpRequest to send formData to the server
+            // For simplicity, this example uses Fetch API
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Handle response from the server if needed
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors if any
+            });
+        }
+    </script>
+</body>
+</html> 
+
+

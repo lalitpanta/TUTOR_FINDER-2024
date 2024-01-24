@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://kit.fontawesome.com/02790924ce.js" crossorigin="anonymous"></script>
+
+
+<style>
+    .containeer{
+    position: relative;
+    max-width: 900px;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.containeer header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.containeer header::before{
+content: "";
+position: absolute;
+left: 0;
+bottom: -2px;
+height: 3px;
+width: 27px;
+background-color: #4070f4;
+border-radius: 12px;
+}
+.containeer form{
+    position: relative;
+    min-height: 490px;
+    background-color: #fff;
+}
+
+.containeer form .form{
+    position: relative;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.containeer form .title {
+    display: block;
+    margin-bottom: 8px; 
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.containeer form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+   display: flex;
+   width: calc(100%/3 - 15px);
+   flex-direction: column;
+   margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input{
+    padding: 0 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    outline: none;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus,valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-field input[type="date"]{
+    color: #333;
+
+}
+
+.containeer form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    height: 45px;
+    border: none;
+    outline:none;
+    color: #fff;
+    margin: 25px 0;
+    max-width: 200px;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.containeer form button
+.containeer form button .backBtn{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover{
+    background-color:#265df2;
+}
+form button i,
+form .backBtn i{
+  margin: 0 6px;  
+}
+
+
+
+form .buttons{
+   display: flex;
+   align-items: center;
+
+}
+form .buttons button,
+ .backBtn{
+    margin-right: 14px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="containeer">
+        <header>Registration</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details_personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date Of Birth</label>
+                            <input type="date" placeholder="Enter your DOB" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+
+
+
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter your number" required>
+                            </div>
+    
+
+
+
+
+
+
+                            <div class="input-field">
+                            <label>Gender</label>
+                            <input type="text" placeholder="enter your gender" required>
+                            
+                              
+                            </div>
+    
+
+
+
+
+
+
+
+
+                            <div class="input-field">
+                                <label>Address</label>
+                                <input type="text" placeholder="Enter your address" required>
+                            </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="details_Id">
+                    <span class="title">Identity Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Id Type</label>
+                            <input type="text" placeholder="Enter ID type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter your ID number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+
+                    </div>
+
+                    <div class="drop-document">
+                        <span class="title">Attach document </span>
+                        <iframe src="/upload/up.html" frameborder="0" height="320px" width="100%"></iframe>
+
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="form second">
+                <div class="details_Qualification">
+                    <span class="title">Highest Qualification Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Degree</label>
+                            <input type="text" placeholder="Enter your highest degree" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>University/board</label>
+                            <input type="text" placeholder="Enter name of university/board" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Institution</label>
+                            <input type="text" placeholder="Enter institution name" required>
+                        </div>
+
+
+
+
+                            <div class="input-field">
+                                <label>GPA/percentage</label>
+                                <input type="number" placeholder="Enter your GPA/Percentage" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Passed Year</label>
+                                <input type="text" placeholder="Enter passed year in BS" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Area of Expertise</label>
+                                <input type="text" placeholder="Enter subject you want to teach" required>
+                            </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="drop-document">
+                    <span class="title">Attach document</span>
+
+
+
+                <div class="license_id">
+                    <span class="title">Teaching License Details(Optional)</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Level</label>
+                            <input type="text" placeholder="Enter your level of license" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>License Number</label>
+                            <input type="number" placeholder="Enter your License number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued date</label>
+                            <input type="text" placeholder="Enter license issue date" required>
+                        </div>      
+                    </div>
+<div class="buttons">
+   
+
+    <button class="nextBtn">
+        <spann class="btntext">Next</spann>
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+
+    <script>
+
+
+const form = document.querySelector("form"),
+  nextBtn = form.querySelector(".nextBtn"),
+  backBtn = form.querySelector(".backBtn"),
+  allInput = form.querySelectorAll(".first input");
+
+nextBtn.addEventListener("click", () => {
+  allInput.forEach((input) => {
+    if (input.value !== "") {
+      form.classList.add("secActive");
+    } else {
+      form.classList.remove("secActive");
+    }
+  })
+})
+
+backBtn.addEventListener("click", () => form.classList.remove("secActive"));
+
+
+
+    </script>
+</body>
+</html>
